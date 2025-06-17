@@ -20,4 +20,4 @@ app.get('/api/quotes/random', (req, res) => {
 
 app.listen(3000, () => {
     console.log("api server running at http://localhost:3000");
-});git remote set-url origin https://github.com/suyash503/quote-api.git
+});
