@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 2rem;
+            background: #f4f4f4;
+            text-align: center;
+        }
+    
+        #quote {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+        }
+    
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+    
+        </style>
+</head>
+<body>
+    <h1>random quote generator</h1>
+    <div id="quote">click on the button to get a dose of inspiration</div>
+    <button onclick="getQuote()">inspire me</button>
+
+    <script>
+        async function getQuote() {
+            const res = await fetch('http://localhost:3000/api/quotes/random');
+            const data = await res.json();
+            document.getElementById('quote').innerText = `"${data.text}"`;
+        }
+    </script>
+</body>
+</html>
