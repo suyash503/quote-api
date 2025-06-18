@@ -18,6 +18,7 @@ app.get('/api/quotes/random', (req, res) => {
     res.json(randomQuote);
 });
 
-app.listen(3000, () => {
-    console.log("api server running at http://localhost:3000");
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`api server running at http://localhost:${PORT}`);
 });
