@@ -31,7 +31,7 @@
 
     <script>
         async function getQuote() {
-            const res = await fetch('http://localhost:3000/api/quotes/random');
+            const res = await fetch(' / api / quotes / random');
             const data = await res.json();
             document.getElementById('quote').innerText = `"${data.text}"`;
         }
