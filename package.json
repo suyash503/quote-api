@@ -17,5 +17,9 @@
     "url": "https://github.com/suyash503/quote-api/issues"
   },
   "homepage": "https://github.com/suyash503/quote-api#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
 }
